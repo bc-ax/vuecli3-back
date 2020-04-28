@@ -63,18 +63,9 @@ export default {
         var checkAge = (rule, value, callback) => {
             if (value === "") {
                 return callback(new Error("请输入验证码"));
+            }else{
+                callback();
             }
-            setTimeout(() => {
-                if (!Number.isInteger(value)) {
-                    callback(new Error("请输入数字值"));
-                } else {
-                    if (value < 18) {
-                        callback(new Error("必须年满18岁"));
-                    } else {
-                        callback();
-                    }
-                }
-            }, 1000);
         };
         return {
             menuTab: [
