@@ -1,0 +1,71 @@
+body{
+    font-size: 14px;
+}
+
+$layoutWidth:200px;
+$mainCcolor:#f56c56;
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+@mixin webkit($type,$value) {
+    #{$type}: $value;
+    -webkit-#{$type}: $value;
+    -moz-#{$type}: $value;
+    -o-#{$type}: $value;
+    -ms-#{$type}: $value;
+}
+.el-menu {
+    border: none;
+}
+
+.el-submenu .el-menu-item {
+    font-size: 14px;
+    padding-left: 50px !important;
+
+    &.is-active {
+        background-color: rgba(245, 108, 108, 0.5) !important;
+    }
+}
+
+.el-submenu__title:hover{
+    background-color: rgba(14, 221, 240, 0.32) !important;
+  }
+  .el-menu-item:hover{
+    background-color: rgba(14, 221, 240, 0.32) !important;
+  }
+// 修改一级菜单样式
+li.el-submenu {
+    &.is-active.is-opened .el-submenu__title {
+        background-color: $mainCcolor !important;
+    }
+}
+.close {
+    .el-submenu {
+        &.is-opened {
+            > .el-submenu__title {
+                background-color: $mainCcolor !important;
+            }
+        }
+    }
+}
+.el-menu--vertical {
+    background-color: #f56c56 !important;
+    .el-menu { background-color: $mainCcolor !important; }
+    .el-menu-item { line-height: 56px; }
+    .el-menu-item:hover {
+        background-color: $mainCcolor !important;
+    }
+    .el-menu .el-menu--popup {
+        background-color: #000 !important;
+        
+    }
+}
+.el-menu--vertical:hover{
+    background-color: #f56c56 !important;
+}
