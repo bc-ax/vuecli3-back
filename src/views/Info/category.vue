@@ -1,5 +1,7 @@
 <template>
-    <div>infoCategory</div>
+    <div>
+        
+    </div>
 </template>
 
 <script>
